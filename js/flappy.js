@@ -139,7 +139,7 @@ function FlappyBird() {
         const temporizador = setInterval(()=>{
             barreiras.animar()
             passaro.animar()
-            if (colidiu(passaro,barreiras)) {
+            if (colidiu(passaro,barreiras) || passaro.getY()===0 || passaro.getY()>=altura-passaro.elemento.clientHeight) {
                 // console.log('colidiu')
                 clearInterval(temporizador)
                 jogando = false
