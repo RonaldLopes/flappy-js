@@ -159,7 +159,8 @@ function FlappyBird() {
                 if(e.key == 'r'){
                     // alert('Teste')
                     passaro.setY(altura/2)
-                    progresso.atualizarPontos(0)
+                    pontos = 0
+                    progresso.atualizarPontos(pontos)
                     barreiras.resetParDeBarreiras()
                     this.start()
                     clearInterval(temporizadorDeEspera)
