@@ -153,8 +153,11 @@ function FlappyBird() {
     } 
 
     this.reset = () =>{
+        const elementoResultado = novoElemento('span','resultado')
+        elementoResultado.innerHTML = `Sua pontuacao foi de ${pontos} pontos `
+        areaDoJogo.appendChild(elementoResultado)
         const temporizadorDeEspera = setInterval(()=>{
-            progresso.elemento.innerHTML = "Pressione R para jogar novamente"
+            progresso.elemento.innerHTML = `Pressione R para jogar novamente`
             window.onkeydown = e => {
                 if(e.key == 'r'){
                     // alert('Teste')
@@ -162,6 +165,7 @@ function FlappyBird() {
                     pontos = 0
                     progresso.atualizarPontos(pontos)
                     barreiras.resetParDeBarreiras()
+                    areaDoJogo.removeChild(elementoResultado)
                     this.start()
                     clearInterval(temporizadorDeEspera)
                 }

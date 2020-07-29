@@ -60,3 +60,18 @@
     font-size: 70px;
     z-index: 100;
 }
+.resultado{
+    position: absolute;
+    bottom: 50%;
+    /* width: 50%; */
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+    /* filter: blur(8px); */
+    /* filter: blur(1.5rem); */
+}
+
+
